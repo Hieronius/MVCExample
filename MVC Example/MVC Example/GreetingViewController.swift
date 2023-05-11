@@ -13,29 +13,29 @@ import UIKit
 // Our View-Controller Block
 class GreetingViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
+    // Our label
+    @IBOutlet var greetingLabel: UILabel!
+    
     // MARK: - Public Properties
     
     // Instance of our Model
     var person: Person!
-    
-    // Custom buttons
-    let showGreetingButton = UIButton()
-    let greetingLabel = UILabel()
 
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Add custom action to the button
-        showGreetingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        person = Person(name: "Tim", surname: "Cook")
     }
     
-    // MARK: - Public Methods
+    // MARK: - IBActions
     
     // Our custom action for button
     // Here we use an instance of our Model to get it's properties
-    @objc func didTapButton() {
+    @IBAction func didTapButton() {
         let greeting = "Hello" + " " + person.name + " " + person.surname
         greetingLabel.text = greeting
     }
