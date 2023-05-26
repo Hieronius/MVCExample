@@ -29,6 +29,9 @@ class GreetingViewController: UIViewController {
         super.viewDidLoad()
         
         person = Person(name: "Tim", surname: "Cook")
+        
+        print(fib(n: 3))
+        print("test commit 26.05.23")
     }
     
     // MARK: - IBActions
@@ -52,6 +55,10 @@ class GreetingViewController: UIViewController {
         let view = GreetingViewController()
         // assigne person property to model
         view.person = model
+    }
+    
+    func fib(n: Int) -> Int {
+        return n < 2 ? n : (fib(n: n-1) + fib(n: n-2))
     }
 }
 
