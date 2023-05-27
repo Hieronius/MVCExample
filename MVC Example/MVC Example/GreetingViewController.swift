@@ -32,6 +32,7 @@ class GreetingViewController: UIViewController {
         
         print(fib(n: 3))
         print("test commit 26.05.23")
+        print("test commit 27.05.23")
     }
     
     // MARK: - IBActions
